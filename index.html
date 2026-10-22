@@ -27,7 +27,6 @@
         --sans: "DM Sans", sans-serif;
         --serif: "Libre Caslon Display", Georgia, serif;
       }
-
       @media (prefers-color-scheme: dark) {
         :root {
           --paper: #141412;
@@ -39,259 +38,53 @@
           --reverse: #161512;
         }
       }
-
       * { box-sizing: border-box; }
       html { scroll-behavior: smooth; }
-      body {
-        margin: 0;
-        min-width: 0;
-        background: var(--paper);
-        color: var(--ink);
-        font-family: var(--sans);
-        -webkit-font-smoothing: antialiased;
-      }
-
+      body { margin: 0; min-width: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
       a { color: inherit; }
-      .page {
-        width: min(1180px, calc(100% - 48px));
-        margin: 0 auto;
-        padding: 30px 0 48px;
-      }
-
-      .brand-header {
-        display: flex;
-        align-items: center;
-        width: fit-content;
-        margin-bottom: 22px;
-        padding: 9px 14px 9px 10px;
-        background: var(--brand-panel);
-      }
-      .brand-mark {
-        display: block;
-        width: 50px;
-        height: 50px;
-        flex: 0 0 auto;
-      }
-      .brand-name {
-        margin-left: 12px;
-        font-size: clamp(1.6rem, 3vw, 2.15rem);
-        font-weight: 600;
-        line-height: 1;
-        letter-spacing: -.045em;
-      }
+      .page { width: min(1180px, calc(100% - 48px)); margin: 0 auto; padding: 30px 0 48px; }
+      .brand-header { display: flex; align-items: center; width: fit-content; margin-bottom: 22px; padding: 9px 14px 9px 10px; background: var(--brand-panel); }
+      .brand-mark { display: block; width: 50px; height: 50px; flex: 0 0 auto; }
+      .brand-name { margin-left: 12px; font-size: clamp(1.6rem, 3vw, 2.15rem); font-weight: 600; line-height: 1; letter-spacing: -.045em; }
       .brand-name .globe { color: var(--brand-navy); }
       .brand-name .wire { color: var(--brand-blue); }
-
-      .edition-bar {
-        display: grid;
-        grid-template-columns: 1fr auto 1fr;
-        align-items: center;
-        min-height: 42px;
-        border-top: 1px solid var(--ink);
-        border-bottom: 1px solid var(--ink);
-        font-size: .76rem;
-        font-weight: 600;
-        letter-spacing: .09em;
-        text-transform: uppercase;
-      }
+      .edition-bar { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; min-height: 42px; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); font-size: .76rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; }
       .edition-bar span:nth-child(2) { text-align: center; }
       .edition-bar span:last-child { text-align: right; }
-      .edition-bar .mark {
-        display: inline-flex;
-        gap: 8px;
-        align-items: center;
-      }
-      .mark::before {
-        content: "";
-        width: 7px;
-        height: 7px;
-        border-radius: 50%;
-        background: var(--signal);
-      }
-
-      .lead {
-        display: grid;
-        grid-template-columns: minmax(0, 1.8fr) minmax(230px, .72fr);
-        gap: clamp(42px, 8vw, 116px);
-        padding: clamp(58px, 9vw, 112px) 0 clamp(48px, 7vw, 84px);
-        border-bottom: 4px double var(--ink);
-      }
+      .edition-bar .mark { display: inline-flex; gap: 8px; align-items: center; }
+      .mark::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--signal); }
+      .lead { display: grid; grid-template-columns: minmax(0, 1.8fr) minmax(230px, .72fr); gap: clamp(42px, 8vw, 116px); padding: clamp(58px, 9vw, 112px) 0 clamp(48px, 7vw, 84px); border-bottom: 4px double var(--ink); }
       .lead-copy { max-width: 760px; }
-      .kicker {
-        margin: 0 0 18px;
-        color: var(--signal);
-        font-size: .78rem;
-        font-weight: 600;
-        letter-spacing: .12em;
-        text-transform: uppercase;
-      }
-      h1 {
-        max-width: 730px;
-        margin: 0;
-        font-family: var(--serif);
-        font-size: clamp(3.3rem, 8.6vw, 7.5rem);
-        font-weight: 400;
-        line-height: .88;
-        letter-spacing: -.045em;
-      }
-      .dek {
-        max-width: 600px;
-        margin: 28px 0 0;
-        color: var(--muted);
-        font-size: clamp(1.02rem, 1.65vw, 1.25rem);
-        line-height: 1.62;
-      }
-
-      .desk-index {
-        align-self: end;
-        border-top: 1px solid var(--ink);
-      }
-      .desk-index h2 {
-        margin: 14px 0 18px;
-        font-family: var(--sans);
-        font-size: .76rem;
-        letter-spacing: .12em;
-        text-transform: uppercase;
-      }
+      .kicker { margin: 0 0 18px; color: var(--signal); font-size: .78rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+      h1 { max-width: 730px; margin: 0; font-family: var(--serif); font-size: clamp(3.3rem, 8.6vw, 7.5rem); font-weight: 400; line-height: .88; letter-spacing: -.045em; }
+      .dek { max-width: 600px; margin: 28px 0 0; color: var(--muted); font-size: clamp(1.02rem, 1.65vw, 1.25rem); line-height: 1.62; }
+      .desk-index { align-self: end; border-top: 1px solid var(--ink); }
+      .desk-index h2 { margin: 14px 0 18px; font-family: var(--sans); font-size: .76rem; letter-spacing: .12em; text-transform: uppercase; }
       .desk-index ul { margin: 0; padding: 0; list-style: none; }
-      .desk-index li {
-        display: flex;
-        justify-content: space-between;
-        gap: 18px;
-        padding: 10px 0;
-        border-top: 1px solid var(--rule);
-        font-family: var(--serif);
-        font-size: 1.15rem;
-      }
-      .desk-index li::after {
-        content: "○";
-        color: var(--signal);
-        font-family: var(--sans);
-        font-size: .92rem;
-      }
-
+      .desk-index li { display: flex; justify-content: space-between; gap: 18px; padding: 10px 0; border-top: 1px solid var(--rule); font-family: var(--serif); font-size: 1.15rem; }
+      .desk-index li::after { content: "○"; color: var(--signal); font-family: var(--sans); font-size: .92rem; }
       .latest { padding: 26px 0 0; }
-      .section-head {
-        display: flex;
-        align-items: baseline;
-        justify-content: space-between;
-        gap: 20px;
-        padding-bottom: 14px;
-        border-bottom: 1px solid var(--ink);
-      }
-      .section-head h2 {
-        margin: 0;
-        font-family: var(--serif);
-        font-size: clamp(1.8rem, 4vw, 3rem);
-        font-weight: 400;
-        letter-spacing: -.025em;
-      }
-      .section-head p {
-        margin: 0;
-        color: var(--muted);
-        font-size: .78rem;
-        letter-spacing: .06em;
-        text-transform: uppercase;
-      }
-
-      .edition-note {
-        display: flex;
-        align-items: baseline;
-        gap: 16px;
-        margin-top: 18px;
-        padding: 13px 0 15px;
-        border-bottom: 1px solid var(--rule);
-        color: var(--muted);
-        font-size: .9rem;
-        line-height: 1.55;
-      }
-      .edition-note strong {
-        flex: 0 0 auto;
-        color: var(--signal);
-        font-size: .74rem;
-        letter-spacing: .11em;
-        text-transform: uppercase;
-      }
-
-      .story-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        border-bottom: 1px solid var(--ink);
-      }
-      .story {
-        padding: clamp(28px, 4vw, 48px) clamp(0px, 3.2vw, 42px);
-        border-top: 1px solid var(--rule);
-      }
+      .section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; padding-bottom: 14px; border-bottom: 1px solid var(--ink); }
+      .section-head h2 { margin: 0; font-family: var(--serif); font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 400; letter-spacing: -.025em; }
+      .section-head p { margin: 0; color: var(--muted); font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; }
+      .edition-note { display: flex; align-items: baseline; gap: 16px; margin-top: 18px; padding: 13px 0 15px; border-bottom: 1px solid var(--rule); color: var(--muted); font-size: .9rem; line-height: 1.55; }
+      .edition-note strong { flex: 0 0 auto; color: var(--signal); font-size: .74rem; letter-spacing: .11em; text-transform: uppercase; }
+      .story-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-bottom: 1px solid var(--ink); }
+      .story { padding: clamp(28px, 4vw, 48px) clamp(0px, 3.2vw, 42px); border-top: 1px solid var(--rule); }
       .story:nth-child(odd) { padding-left: 0; }
-      .story:nth-child(even) {
-        padding-right: 0;
-        border-left: 1px solid var(--rule);
-      }
-      .story-meta {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px 18px;
-        margin-bottom: 18px;
-        color: var(--muted);
-        font-size: .72rem;
-        font-weight: 600;
-        letter-spacing: .09em;
-        text-transform: uppercase;
-      }
+      .story:nth-child(even) { padding-right: 0; border-left: 1px solid var(--rule); }
+      .story-meta { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-bottom: 18px; color: var(--muted); font-size: .72rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; }
       .story-meta .category { color: var(--signal); }
-      .story h3 {
-        margin: 0;
-        font-family: var(--serif);
-        font-size: clamp(1.7rem, 3.5vw, 2.65rem);
-        font-weight: 400;
-        line-height: 1.08;
-        letter-spacing: -.025em;
-      }
-      .story p {
-        margin: 22px 0 0;
-        color: var(--muted);
-        font-size: .98rem;
-        line-height: 1.7;
-      }
-      .story-source {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        margin-top: 20px;
-        color: var(--ink);
-        font-size: .78rem;
-        font-weight: 600;
-        text-decoration-thickness: 1px;
-        text-underline-offset: 4px;
-      }
-      .story-source::after {
-        content: "↗";
-        color: var(--signal);
-        font-size: .88rem;
-        text-decoration: none;
-      }
-      .story-source:focus-visible {
-        outline: 2px solid var(--signal);
-        outline-offset: 4px;
-      }
-
-      footer {
-        display: flex;
-        justify-content: space-between;
-        gap: 24px;
-        padding-top: 22px;
-        color: var(--muted);
-        font-size: .78rem;
-        line-height: 1.5;
-      }
+      .story h3 { margin: 0; font-family: var(--serif); font-size: clamp(1.7rem, 3.5vw, 2.65rem); font-weight: 400; line-height: 1.08; letter-spacing: -.025em; }
+      .story p { margin: 22px 0 0; color: var(--muted); font-size: .98rem; line-height: 1.7; }
+      .story-source { display: inline-flex; align-items: center; gap: 8px; margin-top: 20px; color: var(--ink); font-size: .78rem; font-weight: 600; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+      .story-source::after { content: "↗"; color: var(--signal); font-size: .88rem; text-decoration: none; }
+      .story-source:focus-visible { outline: 2px solid var(--signal); outline-offset: 4px; }
+      footer { display: flex; justify-content: space-between; gap: 24px; padding-top: 22px; color: var(--muted); font-size: .78rem; line-height: 1.5; }
       footer p { margin: 0; }
-
       @media (max-width: 760px) {
         .page { width: min(100% - 28px, 1180px); padding-top: 18px; }
-        .edition-bar {
-          grid-template-columns: 1fr auto;
-          font-size: .68rem;
-        }
+        .edition-bar { grid-template-columns: 1fr auto; font-size: .68rem; }
         .edition-bar span:nth-child(2) { text-align: right; }
         .edition-bar span:last-child { display: none; }
         .edition-note { align-items: flex-start; flex-direction: column; gap: 4px; }
@@ -304,14 +97,8 @@
         .section-head { align-items: flex-end; }
         footer { flex-direction: column; }
       }
-
-      @media (max-width: 420px) {
-        .section-head p { max-width: 110px; text-align: right; }
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        html { scroll-behavior: auto; }
-      }
+      @media (max-width: 420px) { .section-head p { max-width: 110px; text-align: right; } }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
     </style>
   <!-- Google tag (gtag.js) - GlobeWire GA4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-70FH2DDMDM"></script>
@@ -321,7 +108,6 @@
   gtag('js', new Date());
   gtag('config', 'G-70FH2DDMDM');
 </script>
-
 <!-- GlobeWire SEO: meta + social preview tags -->
 <meta name="description" content="GlobeWire: verified world news in clear English, updated five times daily. Breaking headlines with original summaries and trusted source links.">
 <link rel="canonical" href="https://qamarmuhrai.github.io/globewire/">
@@ -333,7 +119,6 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GlobeWire — Latest World News in English">
 <meta name="twitter:description" content="Verified world news in clear English, updated five times daily.">
-
 </head>
   <body>
     <main class="page">
@@ -349,21 +134,20 @@
       <div class="edition-bar" aria-label="Publication details">
         <span class="mark">World desk</span>
         <span>22 October 2026</span>
-        <span>Evening edition</span>
+        <span>Night edition</span>
       </div>
 
       <div class="edition-note" role="note">
         <strong>Updated</strong>
-        <span>Snapshot prepared at 17:50 PKT on 22 October 2026. Reporting is independently summarized in original wording, with the original sources linked below.</span>
+        <span>Snapshot prepared at 22:37 PKT on 22 October 2026. Reporting is independently summarized in original wording, with the original sources linked below.</span>
       </div>
 
       <section class="lead" aria-labelledby="lead-title">
         <div class="lead-copy">
           <p class="kicker">International briefing</p>
           <h1 id="lead-title">Latest world news</h1>
-          <p class="dek">Ten sourced developments from across the globe, written in clear English from reporting published or updated through the evening of Thursday, 22 October — from oil climbing as Washington pulls diplomats out of Saudi Arabia after Houthi strikes on an airport and an oil field, and Turkey gathering seven foreign ministers in Istanbul for unprecedented talks on the region’s wars, to Ebola infections rebounding in Congo and spreading across borders, North Korea threatening to restart border loudspeaker broadcasts, Putin agreeing to resume three-way peace talks on Ukraine, and a US judge ordering Meta to pay $25 billion over Facebook privacy.</p>
+          <p class="dek">Ten sourced developments from across the globe, written in clear English from reporting published or updated through the night of Thursday, 22 October — from a magnitude 7 earthquake striking northern Tibet late in the evening, and a global scramble to patch critical PHP flaws found with AI, to President Zelenskyy backing a freeze along Ukraine's current front lines, Saudi Arabia downing four more drones over Riyadh and Medina as India condemns the Houthi attacks, and the UAE and Greece unveiling €12.75 billion in new deals.</p>
         </div>
-
         <aside class="desk-index" aria-label="Coverage areas">
           <h2>In this edition</h2>
           <ul>
@@ -382,76 +166,75 @@
           <h2 id="latest-title">The latest</h2>
           <p>10 reports</p>
         </div>
-
         <div class="story-grid">
           <article class="story">
-            <div class="story-meta"><span class="category">Latest · Middle East · Energy &amp; Security</span><time datetime="2026-10-22">22 October 2026</time></div>
-            <h3>Oil Climbs as US Pulls Diplomats From Saudi Arabia After Houthi Strikes on Airport and Oil Field</h3>
-            <p>Oil prices pushed higher on Thursday after a fresh wave of Houthi attacks inside Saudi Arabia prompted Washington to order some diplomats and family members out of its missions in the kingdom, with plans to withdraw families from other US missions in the region as well. Brent crude rose $1.29, or 1.2 percent, to $110.11 a barrel in early trading, while US West Texas Intermediate crude gained 97 cents to $98.12. Yemen's Iran-aligned Houthis struck several targets on Wednesday: at least one person was killed and eight wounded at a civilian airport in Dammam, and two people died in a drone attack on a Saudi oil field. Iranian media also reported explosions of unknown origin in Sirik, in southern Iran. Iran's foreign minister, Abbas Araqchi, told the Financial Times that Tehran was fully prepared to defend itself, while President Masoud Pezeshkian said the United States could not expect dialogue while blockading and threatening Iran. Shipping remains under pressure too — data from Kpler counted at least 18 attacks on vessels over the past two weeks, and LSEG analysts warned that Iran is targeting tankers well beyond the Strait of Hormuz, into the Gulf of Oman.</p>
-            <a class="story-source" href="https://www.reuters.com/business/energy/oil-rises-us-orders-diplomats-leave-saudi-arabia-amid-escalating-tensions-2026-10-22/" target="_blank" rel="noopener noreferrer">Source: Reuters</a>
+            <div class="story-meta"><span class="category">Latest · Asia-Pacific · Natural Disaster</span><time datetime="2026-10-22">22 October 2026</time></div>
+            <h3>Magnitude 7 Earthquake Strikes Northern Tibet, Strongest to Hit China Since January 2024</h3>
+            <p>A powerful earthquake measuring magnitude 7 struck Baqen County in Nagqu, northern Tibet, at 10:33 p.m. local time on Thursday, China's Earthquake Networks Centre said, with no immediate reports of casualties or damage. The tremor occurred at a shallow depth of 10 kilometres, with its epicentre recorded at 32.40 degrees north latitude and 93.79 degrees east longitude — in high-altitude terrain where the average elevation within five kilometres is about 4,864 metres, roughly 400 kilometres from the Tibetan capital Lhasa. The centre said the shaking was clearly felt locally. China's Earthquake Administration activated a Level II emergency response, state news agency Xinhua reported. The Tibetan Plateau is highly prone to major quakes because it lies where the Eurasian and Indian tectonic plates collide. The quake is the strongest recorded in China since January 2024; a magnitude 7.1 tremor in Yushu, in neighbouring Qinghai province about 280 kilometres away, killed at least 2,698 people in 2010, while a quake in Tingri county in January 2025 killed at least 126.</p>
+            <a class="story-source" href="https://www.thehindu.com/news/international/tibet-earthquake-nagqu-updates-october-22-2026/article71612585.ece" target="_blank" rel="noopener noreferrer">Source: The Hindu / Reuters / CENC</a>
           </article>
 
           <article class="story">
-            <div class="story-meta"><span class="category">Latest · Middle East · Diplomacy</span><time datetime="2026-10-22">22 October 2026</time></div>
-            <h3>Turkey Brings Seven Foreign Ministers Together in Istanbul for First Talks of Their Kind on Regional Wars</h3>
-            <p>Turkey's foreign minister, Hakan Fidan, will host his counterparts from Egypt, Pakistan, Saudi Arabia, Britain, France and Germany in Istanbul on Friday, a Turkish diplomatic source said on Thursday — the first time the seven countries have met in this format, at Ankara's initiative. The agenda spans the Israeli–Palestinian issue, the latest situation in the Strait of Hormuz, developments in Yemen, efforts to end the Russia–Ukraine war, and closer cooperation between regional and European countries, as wars involving Iran, Yemen and Ukraine threaten shipping routes and regional security. Fidan is expected to press for a diplomatic solution to the war between the United States and Iran, stress the importance of freedom of navigation in the Hormuz and Bab el-Mandeb straits, and restate Turkey's support for Saudi Arabia's security against Houthi attacks under the Mecca Joint Defence Agreement signed by Turkey, Pakistan and Saudi Arabia. He will also highlight Turkey's work to stop the Ukraine war spreading into the Black Sea, and the regional risks the conflict poses.</p>
-            <a class="story-source" href="https://www.reuters.com/world/asia-pacific/turkey-host-regional-european-foreign-ministers-talks-regional-conflicts-source-2026-10-22/" target="_blank" rel="noopener noreferrer">Source: Reuters</a>
+            <div class="story-meta"><span class="category">Latest · Global Affairs · Cybersecurity</span><time datetime="2026-10-22">22 October 2026</time></div>
+            <h3>Global Scramble to Patch Critical PHP Flaws Found With AI as Hackers Race to Exploit Them</h3>
+            <p>Website operators, governments and cloud providers around the world have spent a second day racing to patch two critical vulnerabilities in PHP, the programming language that underpins a large share of the public web, after the flaws were disclosed on Wednesday. Tracked as CVE-2026-109618 and CVE-2026-109619 and dubbed PHP2Shell, the remote-code-execution bugs each carry a severity rating of 9.2 out of 10 and affect releases dating back two decades. They lay undetected for more than a decade until researchers using artificial intelligence models located and verified them, working with the PHP team and security firm Wiz. PHP powers WordPress, Drupal, Joomla and many other systems, and the Drupal Association warned that all servers running any PHP version from the last 20 years are exposed. Several European governments took sites offline as a precaution, Japan's prime minister urged owners to check their sites, and Mitsubishi UFJ temporarily suspended some online services. Cloudflare said exploitation attempts jumped from thousands in the hours before disclosure to millions afterwards, while the US National Security Agency took the rare step of advising organisations that could not patch immediately to take systems offline. South Korea on Thursday raised its private-sector alert and convened an emergency meeting of intelligence, defence and science officials.</p>
+            <a class="story-source" href="https://www.jpost.com/international/article-912434" target="_blank" rel="noopener noreferrer">Source: Reuters via The Jerusalem Post</a>
           </article>
 
           <article class="story">
-            <div class="story-meta"><span class="category">Latest · Europe · Ukraine War</span><time datetime="2026-10-21">21 October 2026</time></div>
-            <h3>Putin Agrees to Resume Three-Way Peace Talks With Ukraine and the US as Russia Frees American Teacher</h3>
-            <p>Russian President Vladimir Putin has agreed to resume US-mediated peace talks with Ukraine as soon as next month, the Kremlin said after he met US envoy Steve Witkoff in St Petersburg on Wednesday — the ninth time the two have met in person. The encounter opened with a goodwill gesture from Moscow: the release of Stephen Hubbard, a retired American schoolteacher detained since April 2022, whose freedom President Donald Trump had personally requested; Trump said the United States was not required to give anything in return. The Kremlin said the new talks, at a technical level, could take place in Abu Dhabi on or after 10 November and would focus on how to guarantee the security of Ukraine and Russia once the war ends. The last US-mediated round was held in February, before the United States and Israel launched their war against Iran. The meeting came amid concern in Kyiv and among its allies that Washington is backing away from Ukraine, at times withholding real-time intelligence on Russian attacks. Moscow was cooler about Witkoff's earlier talks in Oslo with President Volodymyr Zelenskiy and European and NATO representatives: Kremlin aide Yuri Ushakov said the ideas discussed "do not entirely satisfy us".</p>
-            <a class="story-source" href="https://www.scmp.com/news/world/russia-central-asia/article/3371659/putin-holds-ukraine-peace-talks-trumps-envoy-witkoff-frees-american-hubbard" target="_blank" rel="noopener noreferrer">Source: South China Morning Post / Reuters</a>
+            <div class="story-meta"><span class="category">Latest · Europe · Ukraine War</span><time datetime="2026-10-22">22 October 2026</time></div>
+            <h3>Zelenskyy Backs Freezing Ukraine's Front Lines as a First Step to End the War</h3>
+            <p>Ukrainian President Volodymyr Zelenskyy said on Wednesday that he is prepared to halt fighting along the current front lines as a starting point for ending the war with Russia, while insisting that any settlement must be followed by firm security guarantees from the United States and Europe. Asked on Fox &amp; Friends whether he would accept a deal that left Ukraine holding 75 percent or more of its territory, Zelenskyy replied: "Yes, right now, we have to freeze. And I think this is [a] real way to end this war. We call it ceasefire or 'stop killing' like President Trump called it." He described a freeze as the minimum Kyiv needs from Moscow today, and rejected surrendering the Donbas as unfair, arguing Russian forces are not winning on the battlefield and are seeking through pressure what they have not taken by force. His remarks came just before the Kremlin said President Vladimir Putin had agreed in principle, after meeting US envoy Steve Witkoff in St Petersburg, to resume three-way talks with Washington and Kyiv after 10 November, likely in Abu Dhabi. Russia also released retired American teacher Stephen Hubbard, detained since 2022, whose freedom President Donald Trump had requested.</p>
+            <a class="story-source" href="https://srnnews.com/the-media-line-zelensky-backs-freezing-ukraine-front-lines-as-russia-agrees-to-resume-talks/" target="_blank" rel="noopener noreferrer">Source: The Media Line via SRN News</a>
           </article>
 
           <article class="story">
-            <div class="story-meta"><span class="category">Latest · Africa · Health</span><time datetime="2026-10-22">22 October 2026</time></div>
-            <h3>Ebola Infections Rebound in DR Congo as Cross-Border Spread Heightens Concerns, WHO Says</h3>
-            <p>Ebola infections in the Democratic Republic of the Congo have rebounded after a brief decline, while the virus's spread to other African countries is complicating efforts to contain an outbreak that has already claimed more than 4,600 lives, the World Health Organization warned in its latest situation report on Wednesday. The DRC recorded 1,466 confirmed cases between 29 September and 19 October — up 10.4 percent from the preceding 21-day period — taking its totals to 9,637 confirmed cases and 4,646 confirmed deaths across eight of its 26 provinces. Kenya has reported nine confirmed cases, including one death, with all eight secondary infections linked to an imported case and detected among people already under quarantine. Nigeria confirmed its first case on Tuesday, in a woman who had travelled from Uganda earlier this month; the WHO warned that the long interval between her symptoms appearing and laboratory confirmation raised concerns about potentially undetected exposures and secondary transmission. The Africa Centres for Disease Control and Prevention said on Tuesday that the outbreak had become the most geographically widespread Ebola epidemic on record, with infections reported across Central, Eastern and Western Africa. The outbreak is caused by the rare Bundibugyo strain of the virus, for which there is no approved vaccine or treatment.</p>
-            <a class="story-source" href="https://newsaf.cgtn.com/news/2026-10-22/Ebola-outbreak-rebounds-in-DR-Congo-WHO-1Rs0iw4k5fG/p.html" target="_blank" rel="noopener noreferrer">Source: CGTN / WHO</a>
+            <div class="story-meta"><span class="category">Latest · Middle East · Security</span><time datetime="2026-10-22">22 October 2026</time></div>
+            <h3>Saudi Arabia Downs Four Drones Over Riyadh and Medina as India Condemns Deadly Houthi Attacks</h3>
+            <p>Saudi Arabia said on Thursday it had intercepted and destroyed four drones in the regions of Riyadh and the holy city of Medina, as Houthi attacks on the kingdom continued for another day. Coalition spokesman Turki Al-Malki announced the interceptions on X. The latest defensive action followed Wednesday's twin strikes in the Eastern Province: an attack on King Fahd International Airport in Dammam killed a Saudi citizen and an Indian national and wounded eight others, including two Indians, while falling shrapnel from a drone intercepted over Aramco's Shaybah oil field killed a Filipino and a Nepali resident and injured an Indian and a Pakistani, according to the energy ministry, which said field operations were unaffected. India on Thursday strongly condemned the attacks on civilian and energy infrastructure as "completely unacceptable," expressed solidarity with Saudi Arabia, and said it was working to help Indian pilgrims stranded by flight suspensions return home. New Delhi noted it also lost a citizen in an earlier strike on Riyadh's airport this month, part of a run of Houthi attacks in October that Saudi officials say has killed at least 17 people in the capital.</p>
+            <a class="story-source" href="https://www.arabnews.pk/world/india-condemns-deadly-attacks-on-saudi-arabias-eastern-province-3004937" target="_blank" rel="noopener noreferrer">Source: Arab News</a>
           </article>
 
           <article class="story">
-            <div class="story-meta"><span class="category">Latest · Asia-Pacific · Korean Peninsula</span><time datetime="2026-10-22">22 October 2026</time></div>
-            <h3>North Korea to Put Border Loudspeakers on Standby Within Days, Kim Yo Jong Warns Seoul</h3>
-            <p>North Korea will place anti-South Korea loudspeakers on standby along the entire border within days and has put unspecified new countermeasures on alert, Kim Yo Jong, the powerful sister of North Korea's leader, said on Thursday, warning Seoul of "the most horrible and distressing situation" if South Korea continues what Pyongyang calls interference in the North's internal affairs. In a statement carried by state media KCNA, Kim said she was responding to a special adviser to President Lee Jae Myung on defence policy, who had accused North Korea of planting mines that wounded South Korean soldiers and told it not to escalate tensions. On Wednesday evening, after visiting fortification sites with senior military officials, she said North Korea would activate the loudspeakers across the border by the end of October, adding that tactical units had taken up new positions and accusing South Korean troops of warning broadcasts and warning shots at several locations near the border; South Korea said its warning shots were "legitimate and defensive measures". She warned that North Korean troops would "mercilessly eliminate" South Korean forces if warning fire harmed North Korean territory or personnel. The threats raise tensions along the heavily fortified frontier to their highest level since Lee took office in June last year pledging to ease inter-Korean hostility.</p>
-            <a class="story-source" href="https://www.reuters.com/world/asia-pacific/north-koreas-kim-yo-jong-warns-south-korea-says-border-loudspeakers-be-ready-2026-10-21/" target="_blank" rel="noopener noreferrer">Source: Reuters</a>
+            <div class="story-meta"><span class="category">Latest · Middle East · Economy &amp; Diplomacy</span><time datetime="2026-10-22">22 October 2026</time></div>
+            <h3>UAE and Greece Announce €12.75 Billion in Deals as Abu Dhabi Plans a Further €15 Billion</h3>
+            <p>The United Arab Emirates and Greece on Thursday unveiled 18 memoranda of understanding, agreements and commercial partnerships worth €12.75 billion (about $14.3 billion), while Abu Dhabi said it intends to invest a further €15 billion in Greece. The announcements were made at the UAE–Greece Strategic Forum in Athens, attended by Abu Dhabi Crown Prince Sheikh Khaled bin Mohamed bin Zayed Al Nahyan and Greek Prime Minister Kyriakos Mitsotakis, the Abu Dhabi Media Office said. Sheikh Khaled also held talks with Mitsotakis on widening cooperation in energy, infrastructure and healthcare. The planned new investment builds on an existing joint initiative between the two countries and would add to €4 billion committed in 2022. Last year, Abu Dhabi renewable-energy company Masdar completed its full acquisition of Greek firm Terna Energy, after first buying a 70 percent stake in 2024 at an enterprise value of €3.2 billion.</p>
+            <a class="story-source" href="https://www.reuters.com/world/middle-east/uae-greece-announce-1275-billion-deals-abu-dhabi-plans-further-15-billion-2026-10-22/" target="_blank" rel="noopener noreferrer">Source: Reuters</a>
           </article>
 
           <article class="story">
-            <div class="story-meta"><span class="category">Latest · Americas · Technology</span><time datetime="2026-10-21">21 October 2026</time></div>
-            <h3>Meta Ordered to Pay $25 Billion in New Mexico After Jury Found It Misled Users Over Privacy</h3>
-            <p>A judge in New Mexico has ordered Meta Platforms to pay $25 billion after a jury found the company misled consumers about the privacy of their data — one of the largest financial penalties in US corporate history. The case stems from the Cambridge Analytica scandal, in which the British political consulting firm involved in Donald Trump's 2016 presidential campaign obtained data from millions of Facebook users without their consent through a third-party app. New Mexico, which sued in 2021, accused Meta of lying to users in the state about who had access to their data, and of tolerating hate speech and other harmful content when it benefited the company's bottom line; in September a jury found more than 43 million violations of the state's consumer protection law. "Facebook's wrongdoing — over the course of years and systematically broadcast to the public — goes to the heart of Facebook's core business practices," Judge Francis Mathew wrote, finding that a penalty of more than $219 billion was warranted under state law before reducing the figure to $25 billion. Meta said it will appeal: chief legal officer C.J. Mahoney called the ruling a "tax on speech" that makes it all but impossible to do business in the state. Attorney General Raúl Torrez said technology companies should view the verdict as a warning that their size does not put them beyond the law.</p>
-            <a class="story-source" href="https://www.reuters.com/business/meta-ordered-pay-25-billion-new-mexico-after-jury-finds-company-misled-consumers-2026-10-21/" target="_blank" rel="noopener noreferrer">Source: Reuters</a>
+            <div class="story-meta"><span class="category">Latest · Asia-Pacific · Australia</span><time datetime="2026-10-21">21 October 2026</time></div>
+            <h3>Australian MP Helen Haines Loses Both Legs After Targeted Car Attack Outside Her Office</h3>
+            <p>Independent Australian lawmaker Helen Haines has had both legs amputated after being struck by a car outside her office in Wangaratta, Victoria, in what police described as a targeted attack and Prime Minister Anthony Albanese called a deliberate act. The 65-year-old was hit on Monday while retrieving items from the back of her car and was flown to a Melbourne hospital, where her left leg was amputated that day and her right leg on Wednesday. Her husband Phil Haines told reporters she is alive and stable, saying her heart and mind — "the two most important parts of Helen for us" — are in good shape, and calling her a fighter facing a long recovery. Police have charged 43-year-old Brendan Nugent with dangerous driving causing serious injury, intentionally causing serious injury, and the federal offence of harming a public official, which carries up to 10 years in prison; he did not seek bail and is due back in court on 4 February. The attack has prompted national soul-searching in a country where political violence is rare, as police warn of rising online extremism and a steady increase in threats and abuse directed at elected officials.</p>
+            <a class="story-source" href="https://www.aljazeera.com/news/2026/10/21/attack-on-australian-mp-haines-how-threats-against-legislators-have-soared" target="_blank" rel="noopener noreferrer">Source: Al Jazeera / AFP</a>
           </article>
 
           <article class="story">
-            <div class="story-meta"><span class="category">Latest · Europe · Auto Industry</span><time datetime="2026-10-22">22 October 2026</time></div>
-            <h3>European Car Sales Rise 10 Percent in September as Electric Surge Offsets Petrol and Diesel Slump</h3>
-            <p>Strong demand for electrified cars helped Europe's new-car market grow in September, offsetting another sharp decline in petrol and diesel sales, data from the European Automobile Manufacturers' Association showed on Thursday. New-car registrations, a proxy for sales, rose 10.2 percent year on year to 1.36 million vehicles across the European Union, Britain and the European Free Trade Association. Battery-electric, plug-in hybrid and hybrid registrations jumped 59.9 percent, 24 percent and 5.3 percent respectively, and together accounted for 76.2 percent of all new vehicles, while petrol registrations fell 20.6 percent and diesel 28.2 percent. Chinese automakers continued to gain ground: Chery nearly tripled its sales, BYD doubled its own, and Geely and SAIC rose by more than 33 percent and 23 percent, lifting the four brands' combined market share to 14.6 percent from 9.6 percent a year earlier. Registrations at Volkswagen and Renault declined, while Stellantis gained 4.5 percent; the three European groups' combined market share fell to 43.7 percent from 48.4 percent.</p>
-            <a class="story-source" href="https://www.reuters.com/world/china/europe-car-sales-rise-10-september-ev-surge-offsets-combustion-slump-2026-10-22/" target="_blank" rel="noopener noreferrer">Source: Reuters</a>
+            <div class="story-meta"><span class="category">Latest · Middle East · Defence</span><time datetime="2026-10-21">21 October 2026</time></div>
+            <h3>Pakistan, Türkiye, Qatar and Indonesia Sign 'Badr' Pact to Deepen Defence-Industry Cooperation</h3>
+            <p>Pakistan, Türkiye, Qatar and Indonesia signed the Badr Memorandum of Understanding in Doha on Wednesday to expand cooperation on defence manufacturing, joint production, technology transfer, technical training and research and development. The signing brought together Pakistan's Defence Minister Khawaja Muhammad Asif, Türkiye's Defence Minister Yaşar Güler, Qatar's Deputy Prime Minister and Minister of State for Defence Sheikh Saud bin Abdulrahman Al Thani, and Indonesia's Deputy Defence Minister Yusuf Jauhari, alongside the head of Türkiye's Presidency of Defence Industries, Haluk Görgün. Türkiye's defence ministry said the accord holds substantial economic importance, pooling each country's distinct production strengths to strengthen industrial capacity and help meet the needs of allied and friendly nations. Unlike the Mecca Joint Defence Agreement signed in August by Pakistan, Saudi Arabia and Türkiye — under which an attack on one party is treated as an attack on all — the Badr memorandum is focused on industrial collaboration and does not itself create a collective-defence obligation. Analysts say Türkiye contributes systems integration and technology, Pakistan and Indonesia bring manufacturing scale and large domestic markets, and Qatar brings investment capacity and demand.</p>
+            <a class="story-source" href="https://www.thehindu.com/news/international/pakistan-turkiye-qatar-and-indonesia-sign-pact-to-bolster-defence-cooperation/article71608728.ece" target="_blank" rel="noopener noreferrer">Source: The Hindu / Reuters</a>
           </article>
 
           <article class="story">
-            <div class="story-meta"><span class="category">Latest · Middle East · Economy</span><time datetime="2026-10-22">22 October 2026</time></div>
-            <h3>IMF Sees Middle East, North Africa and Pakistan Output Shrinking 1.3 Percent in 2026 on War's Impact</h3>
-            <p>The International Monetary Fund expects economic output in the Middle East, North Africa and Pakistan to contract by 1.3 percent this year because of the US–Israeli-led war against Iran, before rebounding to 6.6 percent growth in 2027 — though it warned that further disruption to energy production or trade routes could worsen the outlook. In its regional outlook released in Dubai on Thursday, the Fund said the war's impact had been substantial but uneven: oil-exporting economies directly hit by disruptions to energy production and shipping suffered most, while oil importers proved more resilient, with domestic demand supported by remittances and tourism, favourable financial conditions and prompt policy responses that shielded consumers from higher commodity prices. Even so, output across the region would generally remain below pre-war projections. The baseline assumes the conflict abates in early 2027 and trade gradually normalises during the year, but the IMF said the outlook remained clouded by "exceptionally high uncertainty", and that external financial conditions could also tighten if investors reassess AI-driven productivity gains while interest rates rise amid inflation and fiscal concerns. Growth in the Caucasus and Central Asia, meanwhile, is moderating toward a more sustainable pace, forecast at 5.2 percent in 2026 and 5 percent in 2027.</p>
-            <a class="story-source" href="https://www.reuters.com/world/middle-east/imf-sees-13-contraction-middle-east-north-africa-pakistan-2026-2026-10-22/" target="_blank" rel="noopener noreferrer">Source: Reuters</a>
+            <div class="story-meta"><span class="category">Latest · Global Affairs · Technology &amp; Security</span><time datetime="2026-10-22">22 October 2026</time></div>
+            <h3>UN Launches Push for Oversight of AI in Warfare as Pakistan Flags New Risks From Emerging Technologies</h3>
+            <p>The United Nations is launching a new forum on artificial intelligence, peace and security through its Institute for Disarmament Research (UNIDIR) — described as the first and only forum of its kind in the UN system — amid warnings that AI is shrinking the space for human judgment in war, including in the nuclear domain. UNIDIR director Robin Geiss cautioned that the opacity of many AI systems heightens the risk of errors, miscalculation and unintended escalation, and noted that AI is already used for intelligence analysis, target identification, drone operations and cyberattacks. The forum, run through UNIDIR's Centre of Excellence on AI, Peace and Security, will work on voluntary guidelines for responsible industry practice, a shared lexicon for terms such as autonomy and safety, and the risk of non-state groups misusing AI for planning and logistics. Geiss pointed to growing cross-divide concern, including a US proposal in September for an AI notification mechanism with China, and to support for Secretary-General António Guterres's calls for stronger regulation and a legally binding treaty on lethal autonomous weapons. Separately at the UN General Assembly's First Committee, Pakistan's Counsellor Syed Atif Raza warned that AI converging with synthetic biology and life sciences is creating novel risks, saying: "Science is moving faster than governance."</p>
+            <a class="story-source" href="https://www.dawn.com/news/2038914" target="_blank" rel="noopener noreferrer">Source: Dawn</a>
           </article>
 
           <article class="story">
-            <div class="story-meta"><span class="category">Latest · Global Affairs · Technology &amp; Economy</span><time datetime="2026-10-22">22 October 2026</time></div>
-            <h3>IMF and OECD Warn AI Could Widen the Divide Between Rich and Poor Countries</h3>
-            <p>Artificial intelligence could boost global growth, but poorer countries, smaller companies and younger workers risk missing out unless access to power, digital infrastructure and skills improves, officials from the IMF and the OECD have warned. The IMF estimates that effective AI adoption could add up to 0.5 percent to annual global growth over the medium term. "For many developing economies, the critical question is whether they can adopt and diffuse AI," said Era Dabla-Norris, deputy director of the Fund's Fiscal Affairs Department, though she added that "the aggregate productivity evidence, so far, is much less". The OECD estimates AI could add 0.4 to 1.2 percent to annual productivity growth across its member countries, but its chief economist, Stefano Scarpetta, said workplace use trails consumer use, with only limited adoption in core business functions: "There is a large gap between exposure and actual use." The IMF estimates about 40 percent of jobs worldwide could be exposed to AI, and reports of mass layoffs are gathering pace — Barclays is cutting around 5,000 jobs this year as it uses technology including AI to reduce costs, eBay is reported to be laying off 9 percent of its workforce, and Qualcomm is expected to cut jobs globally. The warnings come as massive investment in chips and AI infrastructure supports global growth and record stock markets, while raising questions about whether companies can earn enough from the spending as borrowing costs rise.</p>
-            <a class="story-source" href="https://www.reuters.com/business/finance/imf-oecd-warn-ai-could-widen-rich-poor-country-divide-2026-10-22/" target="_blank" rel="noopener noreferrer">Source: Reuters</a>
+            <div class="story-meta"><span class="category">Latest · Europe · Crime &amp; Justice</span><time datetime="2026-10-22">22 October 2026</time></div>
+            <h3>Poland Detains Second Suspect in Murder of Russian Artist Who Criticised Putin</h3>
+            <p>Polish authorities have detained a second suspect in the June murder of a Russian artist known for criticising President Vladimir Putin, counterintelligence chief Tomasz Siemoniak said on Thursday. The artist, Robert Kuzovkov, also known as Semyon Skrepetsky, died after being shot five times in the eastern city of Biała Podlaska. He had staged a protest in Berlin shortly before the killing. Siemoniak wrote on X that the newly detained man, a 22-year-old Georgian national suspected of complicity in the murder, has been placed in pre-trial detention for three months by a court. At the time of the shooting, police detained a 36-year-old man who they said was using a Georgian passport. The case has drawn attention in Poland as an apparent targeted killing on EU soil of a vocal critic of the Kremlin.</p>
+            <a class="story-source" href="https://www.reuters.com/world/poland-detains-second-suspect-murder-russian-artist-who-criticised-putin-2026-10-22/" target="_blank" rel="noopener noreferrer">Source: Reuters</a>
           </article>
 
           <article class="story">
-            <div class="story-meta"><span class="category">Latest · Global Affairs · Shipping</span><time datetime="2026-10-22">22 October 2026</time></div>
-            <h3>Most Container Lines Expected Back in the Suez Canal by Early Second Quarter, Kuehne+Nagel Chief Says</h3>
-            <p>Most container shipping lines should resume using the Suez Canal route by late in the first quarter or early in the second quarter of 2027, the chief executive of Swiss freight forwarder Kuehne+Nagel said on Thursday, though he cautioned that geopolitics remained volatile. "There is a clear intention among carrier partners to return to the route," Stefan Paul told Reuters after the company raised its 2026 profit outlook for the third time this year. He pointed to higher oil prices as a factor making shorter voyage times more attractive, while adding that reopening the route "would not materially affect customer demand". Most carriers abandoned the Asia–Europe corridor through Suez in November 2023 after attacks in the Red Sea by Yemen's Houthis forced ships onto the much longer trip around Africa, and hopes of a return were dampened again earlier this year by the US–Israeli strikes on Iran in late February. Maersk has already restored selected services through the canal, but analysts say the broader resumption of Red Sea routes is likely to be gradual and phased, and unlikely to materially affect this year's earnings.</p>
-            <a class="story-source" href="https://www.reuters.com/world/middle-east/kuehnenagel-ceo-expects-most-container-lines-back-suez-canal-by-early-q2-2026-10-22/" target="_blank" rel="noopener noreferrer">Source: Reuters</a>
+            <div class="story-meta"><span class="category">Latest · Africa · South Africa</span><time datetime="2026-10-22">22 October 2026</time></div>
+            <h3>South African Police Investigate Killing of Foreign National Beaten by Crowd in Durban</h3>
+            <p>South African police said on Thursday they are investigating the killing of a foreign national who was beaten to death by a crowd of about 50 people in central Durban. The police service said in a post on X that the victim, believed to be in his late thirties or early forties, was declared dead at the scene, after two men who had broken away from a march in the city centre approached him and the wider crowd joined the assault. Police did not disclose the man's nationality and said the motive remains unknown. The killing follows months of anti-migrant protests in South Africa, some of which have turned violent and drawn international criticism, prompting thousands of migrants from elsewhere in Africa to leave affected communities. Earlier this month, anti-migrant demonstrations in Durban and in Johannesburg's Soweto township turned violent, with foreign-owned businesses looted and vehicles set on fire after protests about the processing of asylum applications at a refugee reception centre.</p>
+            <a class="story-source" href="https://www.reuters.com/world/africa/south-african-police-investigate-killing-foreign-national-by-crowd-2026-10-22/" target="_blank" rel="noopener noreferrer">Source: Reuters</a>
           </article>
         </div>
       </section>
